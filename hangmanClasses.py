@@ -26,32 +26,66 @@ class Game:
         self.gameFinished = 0
         self.numberMissed = 0
 
-    def printMenu(self):
+    def print_menu(self):
         print(self.gameMenu)
 
-    def printBoard(self):
+    def print_board(self):
         if self.numberMissed == 0:
-            print(self.gameBoardTop + self.gameBoardHead[0] + self.gameBoardArms[0] + self.gameBoardLegs[0] + self.gameBoardBottom)
-        elif self.numberMissed == 1:
-            print(self.gameBoardTop + self.gameBoardHead[1] + self.gameBoardArms[0] + self.gameBoardLegs[0] + self.gameBoardBottom)
-        elif self.numberMissed == 2:
-            print(self.gameBoardTop + self.gameBoardHead[1] + self.gameBoardArms[1] + self.gameBoardLegs[0] + self.gameBoardBottom)
-        elif self.numberMissed == 3:
-            print(self.gameBoardTop + self.gameBoardHead[1] + self.gameBoardArms[2] + self.gameBoardLegs[0] + self.gameBoardBottom)
-        elif self.numberMissed == 4:
-            print(self.gameBoardTop + self.gameBoardHead[1] + self.gameBoardArms[3] + self.gameBoardLegs[0] + self.gameBoardBottom)
-        elif self.numberMissed == 5:
-            print(self.gameBoardTop + self.gameBoardHead[1] + self.gameBoardArms[3] + self.gameBoardLegs[1] + self.gameBoardBottom)
-        elif self.numberMissed == 6:
-            print(self.gameBoardTop + self.gameBoardHead[1] + self.gameBoardArms[3] + self.gameBoardLegs[2] + self.gameBoardBottom)
+            print(self.gameBoardTop +
+                  self.gameBoardHead[0] +
+                  self.gameBoardArms[0] +
+                  self.gameBoardLegs[0] +
+                  self.gameBoardBottom)
 
-    def printWord(self):
+        elif self.numberMissed == 1:
+            print(self.gameBoardTop +
+                  self.gameBoardHead[1] +
+                  self.gameBoardArms[0] +
+                  self.gameBoardLegs[0] +
+                  self.gameBoardBottom)
+
+        elif self.numberMissed == 2:
+            print(self.gameBoardTop +
+                  self.gameBoardHead[1] +
+                  self.gameBoardArms[1] +
+                  self.gameBoardLegs[0] +
+                  self.gameBoardBottom)
+
+        elif self.numberMissed == 3:
+            print(self.gameBoardTop +
+                  self.gameBoardHead[1] +
+                  self.gameBoardArms[2] +
+                  self.gameBoardLegs[0] +
+                  self.gameBoardBottom)
+
+        elif self.numberMissed == 4:
+            print(self.gameBoardTop +
+                  self.gameBoardHead[1] +
+                  self.gameBoardArms[3] +
+                  self.gameBoardLegs[0] +
+                  self.gameBoardBottom)
+
+        elif self.numberMissed == 5:
+            print(self.gameBoardTop +
+                  self.gameBoardHead[1] +
+                  self.gameBoardArms[3] +
+                  self.gameBoardLegs[1] +
+                  self.gameBoardBottom)
+
+        elif self.numberMissed == 6:
+            print(self.gameBoardTop +
+                  self.gameBoardHead[1] +
+                  self.gameBoardArms[3] +
+                  self.gameBoardLegs[2] +
+                  self.gameBoardBottom)
+
+    def print_word(self):
         print(self.gameWord)
 
-    def printHiddenWord(self):
+    def print_hidden_word(self):
         print(self.gameHiddenWord)
 
-    def isGameFinished(self):
+    def is_game_finished(self):
         if self.gameFinished == 1:
             return True
         else:

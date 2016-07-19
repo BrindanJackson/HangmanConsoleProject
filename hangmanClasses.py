@@ -23,8 +23,9 @@ class Game:
 
         self.gameWord = ""
         self.gameHiddenWord = ""
-        self.gameFinished = 0
+        self.roundFinished = 0
         self.numberMissed = 0
+        self.gameFinished = 0
 
     def print_menu(self):
         print(self.gameMenu)
@@ -84,6 +85,15 @@ class Game:
 
     def print_hidden_word(self):
         print(self.gameHiddenWord)
+
+    def set_round_finished(self, finished):
+        self.roundFinished = finished
+
+    def set_missed(self, number_missed):
+        self.numberMissed = number_missed
+
+    def set_game_finished(self, finished):
+        self.gameFinished = finished
 
     def is_game_finished(self):
         if self.gameFinished == 1:

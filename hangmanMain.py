@@ -1,5 +1,6 @@
 from hangmanClasses import Game
 
+# Starting new hangman game
 newGame = Game()
 
 newGame.printMenu()

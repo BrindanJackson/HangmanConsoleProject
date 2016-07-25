@@ -16,8 +16,9 @@ while newGame.gameFinished == 0:
         print("Not a valid input. Please try again.")
 
     elif menuChoice == '1':
-        '''Get word from file
-        Setup hidden word'''
+        wordsFile = open("hangman_words.txt")
+
+        wordsFile.close()
 
         while newGame.roundFinished == 0:
             pass

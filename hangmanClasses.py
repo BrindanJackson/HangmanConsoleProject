@@ -26,6 +26,7 @@ class Game:
         self.roundFinished = 0
         self.numberMissed = 0
         self.gameFinished = 0
+        self.lettersChosen = []
 
     def print_menu(self):
         print(self.gameMenu)
@@ -100,3 +101,13 @@ class Game:
             return True
         else:
             return False
+
+    def is_round_finished(self):
+        if self.roundFinished == 1:
+            return True
+        else:
+            return False
+
+    def check_letters_chosen(self, letter):
+        return self.lettersChosen.count(letter)
+

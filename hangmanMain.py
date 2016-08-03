@@ -3,11 +3,12 @@
 # Description: The game of hangman played through the console.
 
 from hangmanClasses import Game
+from random import randint
 
 # Starting new hangman game
 newGame = Game()
 
-while newGame.gameFinished == 0:
+while not newGame.is_game_finished():
     newGame.print_menu()
 
     menuChoice = input("Select a menu option: ")
@@ -17,11 +18,25 @@ while newGame.gameFinished == 0:
 
     elif menuChoice == '1':
         wordsFile = open("hangman_words.txt")
-
+        fileContents = wordsFile.read()
         wordsFile.close()
 
-        while newGame.roundFinished == 0:
-            pass
+        wordArray = fileContents.split("\n")
+
+        newGame.gameWord = wordArray[randint(0, len(wordArray)-1)]
+        newGame.gameHiddenWord = "_ " * len(newGame.gameWord)
+
+        while not(newGame.is_round_finished()):
+            newGame.print_board()
+            newGame.print_hidden_word()
+
+            choiceOk = 1
+
+            while choiceOk > 0:
+                letterChoice = input("Pick a letter: ")
+
+                if letterChoice > 0:
+                    print("Letter already chosen: ")
 
     elif menuChoice == '2':
         print("Help Menu")
